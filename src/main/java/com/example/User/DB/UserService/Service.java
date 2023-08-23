@@ -10,6 +10,6 @@ public interface Service {
     public void updateUser(User user);
     public void deleteUser(int id);
     public  User findUser(int id);
-    boolean authenticateUser(String userName, String password);
+    boolean authenticateUser(String email, String password);
 
 }

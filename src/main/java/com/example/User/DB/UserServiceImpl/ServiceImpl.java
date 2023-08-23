@@ -42,8 +42,8 @@ public class ServiceImpl implements Service {
         return Repo.findById(id).get();
     }
 
-    public boolean authenticateUser(String userName, String password) {
-        Optional<User> userOptional = Repo.findByUsername(userName);
+    public boolean authenticateUser(String email, String password) {
+        Optional<User> userOptional = Repo.findByEmail(email);
 
         if (userOptional.isPresent()) {
             User user = userOptional.get();
